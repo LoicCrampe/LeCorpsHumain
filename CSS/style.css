@@ -1,0 +1,129 @@
+/******************Font******************/
+
+@import url('https://fonts.googleapis.com/css?family=Arvo');
+
+/******************Body******************/
+
+body {
+    font-family: Arvo;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+        "Titre"
+        "Corps"
+        "Texte"
+}
+
+h1 {
+    text-align: center;
+}
+
+.corps {
+    position: relative;
+    width: 140px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.texte {
+    display: none;
+    text-align: justify;
+}
+
+#canvas {
+    display: none;
+}
+
+/********************Boutons*********************/
+.bouton {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 100%;
+    background: black;
+    opacity: 0.8;
+    position: absolute;
+    border: none;
+}
+
+.But1 {
+    /* Epaule */
+    top: 18%;
+    left: 3%;
+}
+
+.But2 {
+    /* Coude */
+    top: 33%;
+    left: 72%;
+}
+
+.But3 {
+    /* Poignet */
+    top: 45%;
+    left: 1%;
+}
+
+.But4 {
+    /* Hanche */
+    top: 50%;
+    left: 60%;
+}
+
+.But5 {
+    /* Genou */
+    top: 68%;
+    left: 20%;
+}
+
+.But6 {
+    /* Cheville */
+    top: 86%;
+    left: 50%;
+}
+
+.Red {
+    background-color: red !important;
+    opacity: 0.8;
+}
+
+/********************Grid*********************/
+
+.titre {
+    grid-area: Titre;
+}
+
+.corps {
+    grid-area: Corps;
+}
+
+.texte {
+    grid-area: Texte;
+}
+
+/****************Media Queries****************/
+
+
+@media screen and (min-width: 800px) {
+    body {
+        background-color: #c2d6d6;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            "Titre Titre"
+            "Corps Texte"
+    }
+
+    #canvas {
+        display: block;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+    .texte {
+        width: 50%;
+    }
+}
